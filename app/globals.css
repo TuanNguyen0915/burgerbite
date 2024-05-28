@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+  .flexCol {
+    @apply flex flex-col;
+  }
+  .clip_path {
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 50% 100%, 0% 86%);
+  }
+  .heading {
+    @apply text-[30px] font-bold uppercase leading-[3rem] tracking-wide text-gray-900 md:text-[35px] md:leading-[4rem] lg:text-[45px] xl:text-[50px];
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: orange !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: orange !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator::after {
+  filter: invert(1);
+}
